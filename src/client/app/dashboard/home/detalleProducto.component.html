@@ -1,0 +1,63 @@
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <div class="row">
+        <div class="col-xl-12">
+            <h2 class="page-header">
+                Detalle Producto
+            </h2>
+            <ol class="breadcrumb">
+                <li>
+                    <i class="fa fa-dashboard"></i>  <a href="Javascript:void(0);" routerLink="/dashboard/home">Dashboard</a>
+                </li>
+                <li class="active">
+                    <i class="fa fa-table"></i> Detalle Producto
+                </li>
+            </ol>
+        </div>
+    </div>
+    <!-- /.row -->
+    
+    <div class="row">
+        <div class="col-xl-4">
+            <button type="button" class="btn btn-sm btn-success" (click)="volverHome()"><span class="fa fa-rotate-left" style="padding-right: 6px;"></span>Volver</button>
+            <br/><br/>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-5 col-xl-offset-3">
+            <div class="row">
+                <div class="col-xl-4" style="font-weight: bold;">
+                    Id
+                </div>
+                <div class="col-xl-8">
+                    {{dataProducto.id}}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xl-4" style="font-weight: bold;">
+                    Nombre
+                </div>
+                <div class="col-xl-8">
+                    {{dataProducto.nombre}}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xl-4" style="font-weight: bold;">
+                    Precio
+                </div>
+                <div class="col-xl-8">
+                    {{dataProducto.precio}}
+                </div>
+            </div>
+
+         </div>
+         <div class="col-md-3">
+            <img src="{{dataProducto.path}}" />
+         </div>
+    </div>
+
+</div>

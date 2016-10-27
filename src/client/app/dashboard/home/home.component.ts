@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Router } from '@angular/router';
 /**
 *	This class represents the lazy loaded HomeComponent.
 */
@@ -62,7 +62,7 @@ export class HomeComponent {
 	 }
 	/* END*/
 
-	constructor() {
+	constructor(private router: Router,) {
 		for (let i = 0; i < 4; i++) {
 			this.addSlide();
 		}
@@ -78,4 +78,9 @@ export class HomeComponent {
 		});
 	}
 	/* END */
+
+	verDetalle() {
+		this.router.navigate(['/dashboard', 'ver_detalle_producto']);
+	}
+
 }
