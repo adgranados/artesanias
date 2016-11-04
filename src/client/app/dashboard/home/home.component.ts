@@ -4,6 +4,16 @@ import { Router } from '@angular/router';
 *	This class represents the lazy loaded HomeComponent.
 */
 
+
+@Component({
+	moduleId: module.id,
+	selector: 'producto-cmp',
+	templateUrl: 'producto.html',
+	styleUrls: ['producto.css'],
+})
+export class ProductoComponent { }
+
+
 @Component({
 	moduleId: module.id,
 	selector: 'timeline-cmp',
@@ -56,12 +66,68 @@ export class HomeComponent {
 	     closable: true
 	   }
 	 ];
-
+	 
 	 public closeAlert(i:number):void {
 	   this.alerts.splice(i, 1);
 	 }
 	/* END*/
-
+	public productos:Array<Object> = [
+	{
+		"id":1,
+		"nombre":"Brazalete en mopa mopa",
+		"precio":58000,
+		"path":"artesanias/2824_pulsera-mopa-mopa-barniz-pasto-artesanias-colombia-p.jpg"
+	},
+	{
+		"id":2,
+		"nombre":"Abre Cartas",
+		"precio":9000,
+		"path":"artesanias/2936_abrecartas-madera-carnaval-barranquilla-galapa-atlantico-artesanias-colombia-p.jpg"
+	},
+	{
+		"id":3,
+		"nombre":"Aguamanil Carmen de Viboral",
+		"precio":148000,
+		"path":"artesanias/2682_aguamanil-carmen-viboral-pintura-ceramica-artesanias-colombia-p.jpg"
+	},
+	{
+		"id":4,
+		"nombre":"Alcaparras cerámicas con Cuchara",
+		"precio":39000,
+		"path":"artesanias/2674_alcaparras-ceramica-guaduas-cundinamarca-artesanias-colombia-p.jpg"
+	},
+	{
+		"id":5,
+		"nombre":"Balay Mediano",
+		"precio":84000,
+		"path":"artesanias/3701_balay-mediano-p.png"
+	},
+	{
+		"id":6,
+		"nombre":"Balay Pequeño",
+		"precio":41000,
+		"path":"artesanias/2625_balay-pequeno-p.png"
+	},
+	{
+		"id":7,
+		"nombre":"Balay Siriano Grande",
+		"precio":133000,
+		"path":"3705_balay-mediano-p.png"
+	},
+	{
+		"id":8,
+		"nombre":"Banco Kamentzá, decorado chumbes",
+		"precio":270000,
+		"path":"artesanias/2782_butaco-kamentza-madera-sibundoy-putumayo-artesanias-colombia-p.jpg"
+	},
+	{
+		"id":9,
+		"nombre":"Banco Tucano Mediano",
+		"precio":82000,
+		"path":"artesanias/2623_bancotucano-p.jpg"
+	}
+	
+];
 	constructor(private router: Router,) {
 		for (let i = 0; i < 4; i++) {
 			this.addSlide();
