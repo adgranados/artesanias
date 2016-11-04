@@ -5,3 +5,5 @@ export * from './home.component';
 export * from './home.routes';
 export * from './detalleProducto.component';
 export * from './detalleProducto.routes';
+export * from './publicarProducto.component';
+export * from './publicarProducto.routes';

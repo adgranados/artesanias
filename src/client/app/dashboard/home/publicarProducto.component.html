@@ -1,0 +1,59 @@
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <div class="row">
+        <div class="col-xl-12">
+            <h2 class="page-header">
+                Publicar Producto
+            </h2>
+            <ol class="breadcrumb">
+                <li>
+                    <i class="fa fa-dashboard"></i>  <a href="Javascript:void(0)" routerLink="/dashboard/home">Inicio</a>
+                </li>
+                <li class="active">
+                    <i class="fa fa-plus"></i> Publicar Producto
+                </li>
+            </ol>
+        </div>
+    </div>
+    <!-- /.row -->
+    <div class="row">
+        <div class="col-xl-12">
+            <alert *ngFor="let alert of alerts;let i = index" [type]="alert.type" dismissible="true" (close)="closeAlert(i)">
+				{{ alert?.msg }}
+			</alert>
+        </div>
+    </div>
+    <form #registrarProductoForm="ngForm" role="form" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="col-xl-4">
+                <fieldset class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input class="form-control texto_mayuscula" type="text" id="nombre" name="nombre" required [(ngModel)]="nombre">
+                    </fieldset>
+            </div>
+            <div class="col-xl-4">
+                <fieldset class="form-group">
+                        <label for="precio">precio</label>
+                        <div class="form-group input-group">
+                            <span class="input-group-addon">$</span>
+                            <input type="text" class="form-control"  type="text" id="precio" name="precio" required [(ngModel)]="precio">
+                        </div>
+                    </fieldset>
+            </div>
+            <div class="col-xl-4">
+                <fieldset class="form-group">
+                        <label class="control-label">Imagen</label>
+                        <input id="input-1" type="file" class="file">
+                    </fieldset>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-6">
+                <button type="submit" class="btn btn-sm btn-success">
+                    <span class="fa fa-save" style="padding-right: 6px;"></span>Guardar
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

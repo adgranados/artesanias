@@ -7,7 +7,7 @@
             </h2>
             <ol class="breadcrumb">
                 <li>
-                    <i class="fa fa-dashboard"></i>  <a href="Javascript:void(0);" routerLink="/dashboard/home">Dashboard</a>
+                    <i class="fa fa-dashboard"></i>  <a href="Javascript:void(0);" routerLink="/dashboard/home">Inicio</a>
                 </li>
                 <li class="active">
                     <i class="fa fa-table"></i> Detalle Producto
@@ -26,13 +26,16 @@
 
 
     <div class="row">
-        <div class="col-md-5 col-xl-offset-3">
+        <div class="col-md-2 col-xl-offset-2">
+            <img style="width: 190px;padding-right:25px;" src="assets/img/{{productoSeleccionado.path}}" />
+         </div>
+        <div class="col-md-8">
             <div class="row">
                 <div class="col-xl-4" style="font-weight: bold;">
                     Id
                 </div>
                 <div class="col-xl-8">
-                    {{dataProducto.id}}
+                    {{productoSeleccionado.id}}
                 </div>
             </div>
 
@@ -41,7 +44,7 @@
                     Nombre
                 </div>
                 <div class="col-xl-8">
-                    {{dataProducto.nombre}}
+                    {{productoSeleccionado.nombre}}
                 </div>
             </div>
 
@@ -50,13 +53,10 @@
                     Precio
                 </div>
                 <div class="col-xl-8">
-                    {{dataProducto.precio}}
+                    {{productoSeleccionado.precio}}
                 </div>
             </div>
 
-         </div>
-         <div class="col-md-3">
-            <img src="{{dataProducto.path}}" />
          </div>
     </div>
 

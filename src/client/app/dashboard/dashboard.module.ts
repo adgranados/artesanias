@@ -13,6 +13,7 @@ import { GridModule } from './grid/grid.module';
 import { BSComponentModule } from './bs-component/bsComponent.module';
 import { BSElementModule } from './bs-element/bsElement.module';
 import { DetalleProductoModule } from './home/detalleProducto.module';
+import { PublicarProductoModule } from './home/publicarProducto.module';
 
 import { DashboardComponent } from './dashboard.component';
 
@@ -34,7 +35,8 @@ import {SidebarComponent} from '../shared/index';
     	BSComponentModule,
         BSElementModule,
         BlankPageModule,
-        DetalleProductoModule
+        DetalleProductoModule,
+        PublicarProductoModule
     ],
     declarations: [DashboardComponent, TopNavComponent, SidebarComponent],
     exports: [DashboardComponent, TopNavComponent, SidebarComponent]
