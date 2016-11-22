@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
 })
 export class ProductoComponent {
 	@Input()  prod: Object;
-	constructor(private router: Router,) {
+	constructor(private router: Router) {
 	}
 
 	verDetalle(producto: any) {

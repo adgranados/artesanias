@@ -10,6 +10,8 @@ import { BSComponentRoutes } from './bs-component/index';
 import { BSElementRoutes } from './bs-element/index';
 import { DetalleProductoRoutes } from './home/index';
 import { PublicarProductoRoutes } from './home/index';
+import { CarritoComprasRoutes } from './home/index';
+import { PagarCompraRoutes } from './home/index';
 
 import { DashboardComponent } from './index';
 
@@ -25,6 +27,8 @@ export const DashboardRoutes: Route[] = [
 	    	...BlankPageRoutes,
 			...DetalleProductoRoutes,
 			...PublicarProductoRoutes,
+			...CarritoComprasRoutes,
+			...PagarCompraRoutes,
         ...FormRoutes,
         ...GridRoutes,
         ...BSElementRoutes

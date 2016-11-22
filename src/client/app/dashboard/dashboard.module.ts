@@ -14,6 +14,8 @@ import { BSComponentModule } from './bs-component/bsComponent.module';
 import { BSElementModule } from './bs-element/bsElement.module';
 import { DetalleProductoModule } from './home/detalleProducto.module';
 import { PublicarProductoModule } from './home/publicarProducto.module';
+import { CarritoComprasModule } from './home/carritoCompras.module';
+import { PagarCompraModule } from './home/pagarCompra.module';
 
 import { DashboardComponent } from './dashboard.component';
 
@@ -36,7 +38,9 @@ import {SidebarComponent} from '../shared/index';
         BSElementModule,
         BlankPageModule,
         DetalleProductoModule,
-        PublicarProductoModule
+        PublicarProductoModule,
+        CarritoComprasModule,
+        PagarCompraModule
     ],
     declarations: [DashboardComponent, TopNavComponent, SidebarComponent],
     exports: [DashboardComponent, TopNavComponent, SidebarComponent]

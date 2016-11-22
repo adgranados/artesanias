@@ -1,0 +1,71 @@
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <div class="row">
+        <div class="col-xl-12">
+            <h2 class="page-header">
+                Carrito Compras
+            </h2>
+            <ol class="breadcrumb">
+                <li>
+                    <i class="fa fa-dashboard"></i>  <a href="Javascript:void(0)" routerLink="/dashboard/home">Inicio</a>
+                </li>
+                <li class="active">
+                    <i class="fa fa-shopping-cart"></i> Carrito Compras
+                </li>
+            </ol>
+        </div>
+    </div>
+    <!-- /.row -->
+    <div class="row">
+        <div class="col-xl-12">
+            <alert *ngFor="let alert of alerts;let i = index" [type]="alert.type" dismissible="true" (close)="closeAlert(i)">
+				{{ alert?.msg }}
+			</alert>
+        </div>
+    </div>
+
+    <div class="card card-block">
+        <div class="table-responsive">
+            <table class="table table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Precio Unidad</th>
+                        <th>Cantidad</th>
+                        <th>Total</th>
+                        <th style="text-align:center;">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>5</td>
+                        <td>Balay Mediano</td>
+                        <td>$84000</td>
+                        <td>1</td>
+                        <td>$84000</td>
+                        <th style="text-align:center;"><span class="fa fa-trash-o"></span></th>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Abre Cartas</td>
+                        <td>$9000</td>
+                        <td>3</td>
+                        <td>$27000</td>
+                        <th style="text-align:center;"><span class="fa fa-trash-o"></span></th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xl-6">
+            <button type="submit" class="btn btn-sm btn-success" (click)="pagarCompra()">
+                <span class="fa fa-shopping-cart" style="padding-right: 6px;"></span>Pagar
+            </button>
+        </div>
+    </div>
+
+</div>
