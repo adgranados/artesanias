@@ -16,6 +16,7 @@ import { DetalleProductoModule } from './home/detalleProducto.module';
 import { PublicarProductoModule } from './home/publicarProducto.module';
 import { CarritoComprasModule } from './home/carritoCompras.module';
 import { PagarCompraModule } from './home/pagarCompra.module';
+import { ConsultarComprasModule } from './home/consultarCompras.module';
 
 import { DashboardComponent } from './dashboard.component';
 
@@ -40,7 +41,8 @@ import {SidebarComponent} from '../shared/index';
         DetalleProductoModule,
         PublicarProductoModule,
         CarritoComprasModule,
-        PagarCompraModule
+        PagarCompraModule,
+        ConsultarComprasModule
     ],
     declarations: [DashboardComponent, TopNavComponent, SidebarComponent],
     exports: [DashboardComponent, TopNavComponent, SidebarComponent]

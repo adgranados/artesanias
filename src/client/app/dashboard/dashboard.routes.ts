@@ -12,6 +12,7 @@ import { DetalleProductoRoutes } from './home/index';
 import { PublicarProductoRoutes } from './home/index';
 import { CarritoComprasRoutes } from './home/index';
 import { PagarCompraRoutes } from './home/index';
+import { ConsultarComprasRoutes } from './home/index';
 
 import { DashboardComponent } from './index';
 
@@ -29,6 +30,7 @@ export const DashboardRoutes: Route[] = [
 			...PublicarProductoRoutes,
 			...CarritoComprasRoutes,
 			...PagarCompraRoutes,
+			...ConsultarComprasRoutes,
         ...FormRoutes,
         ...GridRoutes,
         ...BSElementRoutes
