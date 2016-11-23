@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { CarritoComprasService } from './carritoCompras.service';
 /**
 *	This class represents the lazy loaded HomeComponent.
 */
@@ -10,14 +11,30 @@ import { Router } from '@angular/router';
 	selector: 'producto-cmp',
 	templateUrl: 'producto.html',
 	styleUrls: ['producto.css'],
+	providers:[CarritoComprasService]
 })
 export class ProductoComponent {
 	@Input()  prod: Object;
+	// Alert
+	public alerts: Array<Object> = [];
+
 	constructor(private router: Router) {
+	}
+
+	// Alert
+	public closeAlert(i:number):void {
+		this.alerts.splice(i, 1);
 	}
 
 	verDetalle(producto: any) {
 		this.router.navigate(['/dashboard', 'ver_detalle_producto', producto]);
+	}
+
+	agregarProductoCarrito(producto: any){
+		//this.carritoComprasService.addProducto(producto);
+		CarritoComprasService.getInstance().addProducto(producto);
+		let mensaje = 'Se ha agregado el producto ' + producto.nombre;
+        this.alerts.push({ msg: mensaje, type: 'success', dismissOnTimeout: 7000 });
 	}
 
 }

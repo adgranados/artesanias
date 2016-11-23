@@ -11,3 +11,5 @@ export * from './carritoCompras.component';
 export * from './carritoCompras.routes';
 export * from './pagarCompra.component';
 export * from './pagarCompra.routes';
+export * from './consultarCompras.component';
+export * from './consultarCompras.routes';

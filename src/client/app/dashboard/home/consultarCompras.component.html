@@ -1,0 +1,51 @@
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <div class="row">
+        <div class="col-xl-12">
+            <h2 class="page-header">
+                Listado Compras
+            </h2>
+            <ol class="breadcrumb">
+                <li>
+                    <i class="fa fa-dashboard"></i>  <a href="Javascript:void(0)" routerLink="/dashboard/home">Inicio</a>
+                </li>
+                <li class="active">
+                    <i class="fa fa-shopping-cart"></i> Listado Compras
+                </li>
+            </ol>
+        </div>
+    </div>
+    <!-- /.row -->
+    <div class="row">
+        <div class="col-xl-12">
+            <alert *ngFor="let alert of alerts;let i = index" [type]="alert.type" dismissible="true" (close)="closeAlert(i)">
+				{{ alert?.msg }}
+			</alert>
+        </div>
+    </div>
+
+    <div class="card card-block">
+        <div class="table-responsive">
+            <table class="table table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombre Cliente</th>
+                        <th>Total Pagar</th>
+                        <th>productos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let compra of listadoCompras;">
+                        <td>{{compra.id}}</td>
+                        <td>{{compra.nombre_cliente}}</td>
+                        <td>{{compra.total_pagar}}</td>
+                        <td>{{compra.productos}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>

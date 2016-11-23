@@ -39,21 +39,13 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>5</td>
-                        <td>Balay Mediano</td>
-                        <td>$84000</td>
-                        <td>1</td>
-                        <td>$84000</td>
-                        <th style="text-align:center;"><span class="fa fa-trash-o"></span></th>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Abre Cartas</td>
-                        <td>$9000</td>
-                        <td>3</td>
-                        <td>$27000</td>
-                        <th style="text-align:center;"><span class="fa fa-trash-o"></span></th>
+                    <tr *ngFor="let producto of listadoProductosCarrito;">
+                        <td>{{producto.id}}</td>
+                        <td>{{producto.nombre_producto}}</td>
+                        <td>{{producto.valor}}</td>
+                        <td>{{producto.cantidad}}</td>
+                        <td>{{producto.total}}</td>
+                        <th style="text-align:center;"><span class="fa fa-trash-o" (click)="eliminarProductoCarrito(producto)" tooltipPlacement="top" tooltip="Eliminar"></span></th>
                     </tr>
                 </tbody>
             </table>

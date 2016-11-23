@@ -1,3 +1,11 @@
+<div class="row">
+    <div class="col-xl-12">
+        <alert *ngFor="let alert of alerts;let i = index" [type]="alert.type" dismissible="true" (close)="closeAlert(i)">
+            {{ alert?.msg }}
+        </alert>
+    </div>
+</div>
+
 <div class="card card-warning card-inverse">
     <div class="card-header card-warning">
         <div class="row">
@@ -13,7 +21,7 @@
     <div class="card-footer card-default">
         <a href="javascript:;" style="color:#db3541;">
             <span class="pull-xs-left" (click)="verDetalle(prod.id)">Ver Detalle</span>
-            <span class="pull-xs-right"><i class="fa fa-arrow-circle-right"></i></span>
+            <span class="pull-xs-right" (click)="agregarProductoCarrito(prod)"><i class="fa fa-plus"></i></span>
             <div class="clearfix"></div>
         </a>
     </div>
