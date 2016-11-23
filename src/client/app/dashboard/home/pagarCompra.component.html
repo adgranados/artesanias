@@ -24,44 +24,103 @@
 			</alert>
         </div>
     </div>
+
     <form #pagarCompraForm="ngForm" role="form" (ngSubmit)="onSubmit()">
+
         <div class="row">
-            <div class="col-xl-6">
-                <fieldset class="form-group">
-                    <label for="nombre_cliente">Nombre Cliente</label>
-                    <input class="form-control texto_mayuscula" type="text" id="nombre_cliente" name="nombre_cliente" required [(ngModel)]="nombre_cliente">
-                </fieldset>
-            </div>
-            <div class="col-xl-6">
-                <fieldset class="form-group" disabled="">
-                    <label for="total_pagar">Total</label>
-                    <div class="form-group input-group">
-                        <span class="input-group-addon">$</span>
-                        <input type="text" class="form-control"  type="text" id="total_pagar" name="total_pagar" required [(ngModel)]="total_pagar">
+            <div class="col-xl-12"><!-- col-md-offset-1  -->
+                <div class="card">
+                    <div class="card-header card-default">
+                        Datos Cliente
                     </div>
-                </fieldset>
+                    <div class="card-block">
+                        <div class="row">
+                            <div class="col-xl-4">
+                                <fieldset class="form-group">
+                                    <label for="nombre_cliente">Nombre Completo</label>
+                                    <input class="form-control texto_mayuscula" type="text" id="nombre_cliente" name="nombre_cliente" required [(ngModel)]="nombre_cliente">
+                                </fieldset>
+                            </div>
+                            <div class="col-xl-4">
+                                <fieldset class="form-group">
+                                    <label for="direccion">Dirección</label>
+                                    <input class="form-control texto_mayuscula" type="text" id="direccion" name="direccion" required [(ngModel)]="direccion">
+                                </fieldset>
+                            </div>
+                            <div class="col-xl-4">
+                                <fieldset class="form-group">
+                                    <label for="celular">Celular</label>
+                                    <input class="form-control texto_mayuscula" type="text" id="celular" name="celular" required [(ngModel)]="celular">
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
         <div class="row">
-            <div class="col-xl-6">
-                <fieldset class="form-group">
-                    <label for="banco_tarjeta">Entidad Bancaria</label>
-                    <select class="form-control" id="banco_tarjeta" name="banco_tarjeta" required [(ngModel)]="banco_tarjeta">
-                        <option>Bancolombia</option>
-                        <option>Bbva</option>
-                        <option>Popular</option>
-                        <option>Davivienda</option>
-                        <option>Banco de Bogotá</option>
-                    </select>
-                </fieldset>
-            </div>
-            <div class="col-xl-6">
-                <fieldset class="form-group">
-                    <label for="numero_tarjeta">Número Tarjeta</label>
-                    <input class="form-control texto_mayuscula" type="text" id="numero_tarjeta" name="numero_tarjeta" required [(ngModel)]="numero_tarjeta">
-                </fieldset>
+            <div class="col-xl-12"><!-- col-md-offset-1  -->
+                <div class="card">
+                    <div class="card-header card-default">
+                        Datos Pago Tarjeta de Crédito
+                    </div>
+                    <div class="card-block">
+                        <div class="row">
+                            <div class="col-xl-4">
+                                <fieldset class="form-group" disabled="">
+                                    <label for="total_pagar">Total a Pagar</label>
+                                    <div class="form-group input-group">
+                                        <span class="input-group-addon">$</span>
+                                        <input type="text" class="form-control"  type="text" id="total_pagar" name="total_pagar" required [(ngModel)]="total_pagar">
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class="col-xl-4">
+                                <fieldset class="form-group">
+                                    <label for="tipo_tarjeta">Tipo de Tarjeta</label>
+                                    <select class="form-control" id="tipo_tarjeta" name="tipo_tarjeta" required [(ngModel)]="tipo_tarjeta">
+                                        <option>Visa</option>
+                                        <option>MasterCard</option>
+                                        <option>AmericanExpress</option>
+                                    </select>
+                                </fieldset>
+                            </div>
+                            <div class="col-xl-4">
+                                <img src="assets/img/tarjetas.jpg" style="width: 300px;"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-4">
+                                <fieldset class="form-group">
+                                    <label for="numero_tarjeta">Número de Tarjeta</label>
+                                    <input class="form-control texto_mayuscula" type="text" id="numero_tarjeta" name="numero_tarjeta" required [(ngModel)]="numero_tarjeta">
+                                </fieldset>
+                            </div>
+                            <div class="col-xl-4">
+                                <fieldset class="form-group">
+                                    <label for="codigo_seguridad">Código de Seguridad</label>
+                                    <input class="form-control texto_mayuscula" type="text" id="codigo_seguridad" name="codigo_seguridad" required [(ngModel)]="codigo_seguridad">
+                                </fieldset>
+                            </div>
+                            <div class="col-xl-4">
+                                <fieldset class="form-group">
+                                    <label for="banco_tarjeta">Entidad Bancaria</label>
+                                    <select class="form-control" id="banco_tarjeta" name="banco_tarjeta" required [(ngModel)]="banco_tarjeta">
+                                        <option>Bancolombia</option>
+                                        <option>Bbva</option>
+                                        <option>Popular</option>
+                                        <option>Davivienda</option>
+                                        <option>Banco de Bogotá</option>
+                                    </select>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
         <div class="row">
             <div class="col-xl-6">
                 <button type="submit" class="btn btn-sm btn-success">
